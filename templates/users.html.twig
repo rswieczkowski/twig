@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<p>Active users</p>
+
+<ul>
+    {% set userFound = false %}
+    {% for user in users %}
+        {% if user.active %}
+            <li>{{ user.name }}</li>
+            {% set userFound = true %}
+        {% endif %}
+    {% endfor %}
+
+</ul>
+
+{% if userFound == false %}
+    <p>No active user found</p>
+{% endif %}
+
+</body>
+
+</html>
+

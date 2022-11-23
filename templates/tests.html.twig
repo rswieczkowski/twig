@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests</title>
+</head>
+
+<body>
+
+<ul>
+    {% for word in words2 %}
+        {% if word is null %}
+        <p>Null element</p>
+        {% elseif word | trim is empty %}
+        <p>Empty element</p>
+        {% else %}
+        <li>{{ word }}</li>
+        {% endif %}
+    {% endfor %}
+
+</ul>
+
+
+</body>
+</html>

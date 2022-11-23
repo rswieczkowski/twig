@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+
+<body>
+
+<p>
+    {% set length = products|length %}
+    {% for i in range(1, length) %}
+        {{ i }}
+    {% endfor %}
+</p>
+
+<p>
+    {% for i in range(low = 0, high = 10, step = 2) %}
+        {{ i }}
+    {% endfor %}
+</p>
+
+<p>
+    {{ "now"|date("d-m-Y H:i", timezone = "Europe/Warsaw") }}
+</p>
+
+</body>
+</html>
